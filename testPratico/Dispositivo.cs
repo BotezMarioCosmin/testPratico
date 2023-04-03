@@ -48,6 +48,39 @@ namespace testPratico
         }
 
         public abstract float CalcolaPrezzo();
+        public override string ToString()
+        { 
+            return Numser + ";" + Modello + ";";
+        }
+        public string getHashCode()
+        {
+            return Convert.ToString(Numser);
+        }
 
+
+        //equals tutti gli attributi
+        public bool Equals(Dispositivo d)
+        {
+            if (this.Numser == d.Numser && this.Modello == d.Modello)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        //compareTo solo il prezzo
+        public int CompareTo(Dispositivo d)
+        {
+            if (this.CalcolaPrezzo() > d.CalcolaPrezzo())
+            {
+                return 1;
+            }
+            else if (this.CalcolaPrezzo() == d.CalcolaPrezzo())
+            {
+                return 0;
+            }
+            else
+                return -1;
+        }
     }
 }

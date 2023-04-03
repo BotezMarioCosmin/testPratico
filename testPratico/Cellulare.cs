@@ -67,5 +67,25 @@ namespace testPratico
 
             return prezzo + tmp;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + Ram + ";" + Capienza + ";";
+        }
+
+        public override bool Equals(Cellulare c)
+        {
+            if (base.Equals(c) == true)
+            {
+                if (this.Ram == c.Ram && this.Capienza == c.Capienza)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }

@@ -43,5 +43,25 @@ namespace testPratico
             prezzo = Pollici / 20 * 100;
             return prezzo;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + Pollici + ";";
+        }
+
+        public override bool Equals(Tv t)
+        {
+            if (base.Equals(t) == true)
+            {
+                if (this.Pollici == t.Pollici)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }
