@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace testPratico
 {
-    public abstract class Dispositivo
+    public abstract class Dispositivo : IEquatable<Dispositivo>, IComparable<Dispositivo>
     {
         private int _numser;
         private string _modello;

@@ -73,7 +73,7 @@ namespace testPratico
             return base.ToString() + Ram + ";" + Capienza + ";";
         }
 
-        public override bool Equals(Cellulare c)
+        public bool Equals(Cellulare c)
         {
             if (base.Equals(c) == true)
             {

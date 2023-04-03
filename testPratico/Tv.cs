@@ -49,7 +49,7 @@ namespace testPratico
             return base.ToString() + Pollici + ";";
         }
 
-        public override bool Equals(Tv t)
+        public bool Equals(Tv t)
         {
             if (base.Equals(t) == true)
             {
