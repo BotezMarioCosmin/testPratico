@@ -26,13 +26,6 @@ namespace testPratico
             labelCapienza.Hide();
             labelPollici.Hide();
 
-                
-            /*
-            Cellulare dispositivo1 = new Cellulare(1234, "samsung", 2, 256);
-            list.Add(dispositivo1);
-            Tv dispositivo2 = new Tv(1523, "lg", 55);
-            list.Add(dispositivo2);
-            textBox1.Text = list[0].ToString() + list[1].ToString();*/
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,17 +62,29 @@ namespace testPratico
             {
                 Cellulare cellulare = new Cellulare(int.Parse(textBoxNumser.Text), textBoxModello.Text, float.Parse(textBoxRam.Text), float.Parse(textBoxCapienza.Text));
                 listView1.Items.Add(cellulare.ToString());
+                list.Add(cellulare);
             }
             else if (comboBox1.SelectedIndex == 1)
             {
                 Tv tv = new Tv(int.Parse(textBoxNumser.Text), textBoxModello.Text, int.Parse(textBoxPollici.Text));
                 listView1.Items.Add(tv.ToString());
+                list.Add(tv);
             }
             textBoxRam.Text = null;
             textBoxCapienza.Text = null;
             textBoxPollici.Text = null;
             textBoxModello.Text = null;
             textBoxNumser.Text = null;
+        }
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            list.Sort();
+            listView1.Clear();
+            for (int i = 0; i < list.Count; i++)
+            {
+                listView1.Items.Add(list[i].ToString());
+            }
         }
     }
 }
