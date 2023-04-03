@@ -15,7 +15,7 @@ namespace testPratico
         {
             set
             {
-                if (value > 0.00 && value < 32.01)
+                if (value > -0.01 && value < 32.01)
                 {
                     _ram = value;
                 }
@@ -31,7 +31,7 @@ namespace testPratico
         {
             set
             {
-                if (value > 0.00 && value < 1000.01)
+                if (value > -0.01 && value < 1000.01)
                 {
                     _capienza = value;
                 }
@@ -52,8 +52,8 @@ namespace testPratico
 
         public Cellulare()
         {
-            Ram = -1;
-            Capienza = -1;
+            Ram = 0;
+            Capienza = 0;
         }
 
         public override float CalcolaPrezzo()//30 euro per giga ram, 32gb aggiungi 50 euro
