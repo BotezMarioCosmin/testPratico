@@ -42,6 +42,7 @@
             this.labelPollici = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.buttonSort = new System.Windows.Forms.Button();
+            this.buttonIndexOf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAggiungi
@@ -176,11 +177,23 @@
             this.buttonSort.UseVisualStyleBackColor = true;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
+            // buttonIndexOf
+            // 
+            this.buttonIndexOf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIndexOf.Location = new System.Drawing.Point(519, 349);
+            this.buttonIndexOf.Name = "buttonIndexOf";
+            this.buttonIndexOf.Size = new System.Drawing.Size(269, 51);
+            this.buttonIndexOf.TabIndex = 15;
+            this.buttonIndexOf.Text = "IndexOf";
+            this.buttonIndexOf.UseVisualStyleBackColor = true;
+            this.buttonIndexOf.Click += new System.EventHandler(this.buttonIndexOf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonIndexOf);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelPollici);
@@ -218,6 +231,7 @@
         private System.Windows.Forms.Label labelPollici;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button buttonSort;
+        private System.Windows.Forms.Button buttonIndexOf;
     }
 }
 

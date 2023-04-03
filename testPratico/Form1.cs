@@ -77,6 +77,7 @@ namespace testPratico
             textBoxNumser.Text = null;
         }
 
+
         private void buttonSort_Click(object sender, EventArgs e)
         {
             list.Sort();
@@ -85,6 +86,21 @@ namespace testPratico
             {
                 listView1.Items.Add(list[i].ToString());
             }
+        }
+
+        private void buttonIndexOf_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                Cellulare cellulare = new Cellulare(int.Parse(textBoxNumser.Text), textBoxModello.Text, float.Parse(textBoxRam.Text), float.Parse(textBoxCapienza.Text));
+                MessageBox.Show("Posizione: " + Convert.ToString(list.IndexOf(cellulare)));
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                Tv tv = new Tv(int.Parse(textBoxNumser.Text), textBoxModello.Text, int.Parse(textBoxPollici.Text));
+                MessageBox.Show("Posizione: " + Convert.ToString(list.IndexOf(tv)));
+            }
+
         }
     }
 }
